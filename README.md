@@ -112,3 +112,21 @@ function draw() {
   background(220);
   allMyImages();
 }
+
+But this code wouldn't run, so I checked it
+1. let = va, mc, pg, lol;
+2. add: imageModel(CENTER);
+
+The code still wouldn't run, so I asked my cousin to look at the list of errors for me.
+
+![182c67c4386b4b043b1351cef9a0df8](https://github.com/user-attachments/assets/7a27c59b-5783-4f87-a1b4-03e0a219171c)
+
+After double-checking, I finally figured out the problem: I named the folder ‘images’, but I spelled it ‘image’, which caused the path to not be found.
+
+![f0650d4b7befca0ef5e0b50682ecb1b](https://github.com/user-attachments/assets/4785463c-6a69-4df2-b671-6fb5acfc98de)
+
+All the images were grouped together, so I added two lines of code to make each row represent a different week.
+
+![297089cbe4c053fbef6da9393a013a0](https://github.com/user-attachments/assets/7d3b4614-b5cf-4795-b404-1c300326f6a1)
+
+Following the previous format, force the Ypos to move to the next row at the end of each loop. When the next loop runs, reset the Xpos to its starting position.
