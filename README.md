@@ -21,5 +21,12 @@ If want to add more images，fistly load photos from other folders, then remove 
 
 ![5f610cef31da8c0201ff2aab813623d](https://github.com/user-attachments/assets/11d38572-beb7-4553-9bb2-9931ec683521)
 
+![21c96f38c3c03a26834e18fdb1a2f2d](https://github.com/user-attachments/assets/06264694-436d-420a-92a6-fd9f365d12cf)
+
 To replace the data in the CSV file with the corresponding images, we need to copy the "apple" section and modify it to create the "banana" section.
 
+![36309ac3e0dcf677d996544f04d5334](https://github.com/user-attachments/assets/86173378-5739-4260-a74a-d226bcf1bf99)
+
+Make the image on a separate line, no larger than the canvas.
+
+#### Processing
