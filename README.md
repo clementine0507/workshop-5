@@ -38,80 +38,12 @@ Make the image on a separate line, no larger than the canvas.
 
 I wrote the first version of the code based on the workshop5.
 
-let table;
-let va;
-let lol;
-let mc;
-let pg;
+![b00bcdf76e7822b1f2ad4e4c55cf2f2](https://github.com/user-attachments/assets/fc3f6447-db05-464a-b87e-7d671cd89653)
 
-function preload() {
-  table = loadTable("workshop5.csv", "csv", "header");
-  va = loadImage("image/va.jpg");
-  lol = loadImage("image/lol.jpg");
-  mc = loadImage("image/mc.jpg");
-  pg = loadImage("image/pg.jpg");
-}
+![8637d82aa95cffb105e0b2ad19fb7f4](https://github.com/user-attachments/assets/06bfefba-78a0-43d8-9171-4ef3d061be2a)
 
-function setup() {
-  createCanvas(400, 400);
-}
+![6ba9636341d4c3cb1acadea79de376f](https://github.com/user-attachments/assets/737a141d-ec33-46d8-ab49-45bb4141dcb8)
 
-function allMyImages() {
-  let xPos = 30;
-  let yPos = 50;
-  for (let x = 0; x < table.getRowCount(); x++) {
-    let row = table.getRow(x);
-    let countVa = row.get("va");
-    if (countVa > 0) {
-      for (let y = 0; y < countVa; y++) {
-        image(va, xPos, yPos, 40, 40);
-        xPos += 20;
-        if (xPos > 370) {
-          yPos += 30;
-          xPos = 30;
-        }
-      }
-    }
-    let countLol = row.get("lol");
-    if (countLol > 0) {
-      for (let y = 0; y < countLol; y++) {
-        image(lol, xPos, yPos, 40, 40);
-        xPos += 20;
-        if (xPos > 370) {
-          yPos += 30;
-          xPos = 30;
-        }
-      }
-    }
-    let countMc = row.get("mc");
-    if (countMc > 0) {
-      for (let y = 0; y < countMc; y++) {
-        image(mc, xPos, yPos, 40, 40);
-        xPos += 20;
-        if (xPos > 370) {
-          yPos += 30;
-          xPos = 30;
-        }
-      }
-    }
-    let countPg = row.get("pg");
-    if (countPg > 0) {
-      for (let y = 0; y < countPg; y++) {
-        image(pg, xPos, yPos, 40, 40);
-        xPos += 20;
-        if (xPos > 370) {
-          yPos += 30;
-          xPos = 30;
-        }
-      }
-    }
-  }
-}
-
-function draw() {
-  background(220);
-  allMyImages();
-}
 
 But this code wouldn't run, so I checked it
 1. let = va, mc, pg, lol;
