@@ -30,3 +30,85 @@ To replace the data in the CSV file with the corresponding images, we need to co
 Make the image on a separate line, no larger than the canvas.
 
 #### Processing
+
+1. CVS:the number of times I play different games each week
+2. download images in the social media
+   
+![image](https://github.com/user-attachments/assets/7a63a70d-4ce2-4ae8-8e1a-af1ea24d5da5)
+
+I wrote the first version of the code based on the workshop5.
+
+let table;
+let va;
+let lol;
+let mc;
+let pg;
+
+function preload() {
+  table = loadTable("workshop5.csv", "csv", "header");
+  va = loadImage("image/va.jpg");
+  lol = loadImage("image/lol.jpg");
+  mc = loadImage("image/mc.jpg");
+  pg = loadImage("image/pg.jpg");
+}
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function allMyImages() {
+  let xPos = 30;
+  let yPos = 50;
+  for (let x = 0; x < table.getRowCount(); x++) {
+    let row = table.getRow(x);
+    let countVa = row.get("va");
+    if (countVa > 0) {
+      for (let y = 0; y < countVa; y++) {
+        image(va, xPos, yPos, 40, 40);
+        xPos += 20;
+        if (xPos > 370) {
+          yPos += 30;
+          xPos = 30;
+        }
+      }
+    }
+    let countLol = row.get("lol");
+    if (countLol > 0) {
+      for (let y = 0; y < countLol; y++) {
+        image(lol, xPos, yPos, 40, 40);
+        xPos += 20;
+        if (xPos > 370) {
+          yPos += 30;
+          xPos = 30;
+        }
+      }
+    }
+    let countMc = row.get("mc");
+    if (countMc > 0) {
+      for (let y = 0; y < countMc; y++) {
+        image(mc, xPos, yPos, 40, 40);
+        xPos += 20;
+        if (xPos > 370) {
+          yPos += 30;
+          xPos = 30;
+        }
+      }
+    }
+    let countPg = row.get("pg");
+    if (countPg > 0) {
+      for (let y = 0; y < countPg; y++) {
+        image(pg, xPos, yPos, 40, 40);
+        xPos += 20;
+        if (xPos > 370) {
+          yPos += 30;
+          xPos = 30;
+        }
+      }
+    }
+  }
+}
+
+function draw() {
+  background(220);
+  allMyImages();
+}
